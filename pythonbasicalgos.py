@@ -152,3 +152,109 @@ print(max_num(-5, -10, -10))
 # should print -5
 print(max_num(2, 3, 3))
 # should print "It's a tie!"
+
+
+#Append size
+def append_size(my_list):
+  x=len(my_list)
+  my_list.append(x)
+  return my_list
+
+
+print(append_size([23, 42, 108]))
+
+#Append Sum
+
+def append_sum(my_list):
+  for num in range(0, 3):
+    x=my_list[-1]
+    y=my_list[-2]
+    last=x+y
+    my_list.append(last)
+    print(my_list)
+  return my_list
+
+
+print(append_sum([1, 1, 2]))
+
+#largerlist
+def larger_list(my_list1,my_list2):
+  if len(my_list1)>=len(my_list2):
+    return my_list1[-1]
+  else:
+    return my_list2[-1]
+
+print(larger_list([4, 10, 2, 5], [-10, 2, 5, 10]))
+
+#more than n
+def more_than_n(my_list, item, n):
+  x=my_list.count(item)
+  if x>n:
+    return True
+  else:
+    return False
+
+print(more_than_n([2, 4, 6, 2, 3, 2, 1, 2], 2, 3))
+
+#larger list
+def combine_sort(my_list1, my_list2):
+  new_list=my_list1+my_list2
+  new_list.sort()
+  return new_list
+
+print(combine_sort([4, 10, 2, 5], [-10, 2, 5, 10]))
+
+#every three numbers
+def every_three_nums(start):
+  listy=[]
+  for num in range(start, 101, 3):
+    listy.append(num)
+  return listy
+
+print(every_three_nums(91))
+
+#remove middle
+def remove_middle(my_list, start, end):
+  new_list=my_list[0:start]+my_list[end+1:]
+  return new_list
+
+
+print(remove_middle([4, 8, 15, 16, 23, 42], 1, 3))
+
+#return larger count
+def more_frequent_item(my_list, item1, item2):
+  item1_count=my_list.count(item1)
+  item2_count=my_list.count(item2)
+  if item1_count>=item2_count:
+    return item1
+  else:
+    return item2
+
+print(more_frequent_item([2, 3, 3, 2, 3, 2, 3, 2, 3], 2, 3))
+
+#double index
+def double_index(my_list, index):
+  if index>len(my_list)-1:
+    return my_list
+  else:
+    my_list[index]=my_list[index]*2
+    return my_list
+
+
+print(double_index([3, 8, -10, 12], 2))
+
+#middle
+#Write your function here
+import math
+
+def middle_element(my_list):
+  if len(my_list)%2==0:
+    num1=my_list[int(len(my_list)/2)]
+    num2=my_list[int(len(my_list)/2)-1]
+    return (num1+num2)/2
+  else:
+    middle=my_list[int(len(my_list)/2)]
+    return middle
+
+
+print(middle_element([5, 2, -10, -4, 4, 5]))
